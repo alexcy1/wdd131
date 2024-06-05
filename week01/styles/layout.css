@@ -5,6 +5,7 @@ body {
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr;
     height: 100vh;
+    overflow-x: hidden; /* Preventing horizontal scroll */
     grid-template-areas: 
         "header"
         "nav"
@@ -16,16 +17,25 @@ body {
     grid-area: header;
     background-color: #333;
     color: white;
-    padding: 40px;
+    padding: 35px;
     text-align: left;
-    margin-top: -20px;
     font-size: 18px;
+    margin-top: -20px;
 }
 
 .nav {
     grid-area: nav;
     background-color: #000;
     padding: 0;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #eee;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .navigation {
@@ -65,8 +75,7 @@ body {
 
 .main-content {
     background-color: lightgray;
-    padding: 20px;
-    padding-left: 40px;
+    padding: 35px;
     font-size: 18px;
 }
 
@@ -82,11 +91,11 @@ body {
     color: white;
     padding: 30px;
     text-align: center;
-    margin-top: -140px;
     font-size: 18px;
+    margin-top: -100px;
 }
 
-/* Adding Responsive design */
+/* Adding Responsive Design */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
@@ -95,9 +104,27 @@ body {
     .aside-content {
         order: -1;
     }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 
-p {
-    text-align: center;
-    font-size: smaller;
+/* Preventing horizontal scroll */
+body {
+    overflow-x: hidden;
 }
