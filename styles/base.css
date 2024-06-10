@@ -1,0 +1,325 @@
+body, h3, ul, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e3e3e3;
+    font-family: "Trirong", serif;
+}
+
+.header {
+    background-color: #ED115f;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header h3 span {
+    color: #fff;
+}
+
+/* Navbar styles */
+.nav, .navigation {
+    background-color: #000;
+}
+
+/* Navbar styles */
+.nav, .navigation {
+    background-color: #000;
+}
+
+.nav {
+    grid-area: nav;
+    padding: 0;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #eee;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    color: #C0C0C0;
+    padding: .75rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    position: relative; 
+}
+
+.navigation a:hover {
+    color: #C0C0C0;
+    text-decoration: overline;
+    /* background: #ed115f; */
+    transition: .5s;
+    border-radius: 2px;
+}
+
+.navigation a.active {
+    color: #f24591; 
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+}
+
+
+@media (max-width:768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.container {
+    padding: 30px 50px 50px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ED115f;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+}
+
+.about-me .text {
+    flex: 1;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.alex img {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.flag {
+    display: flex;
+    align-items: center;
+}
+
+.flag .official img {
+    width: 250px;
+    height: 210px;
+    margin-right: 20px;
+}
+
+.flag p {
+    flex: 1;
+}
+
+.card-body .title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700px;
+}
+
+.card-header {
+    font-size: 19px;
+}
+
+.header {
+    font-size: 22px;
+    padding:15px;
+}
+
+.nigeria {
+    color: green;
+    font-family: "Sofia", sans-serif;
+    font-size: 24px;
+}
+
+.sidebar .card {
+    height: 100%;
+}
+
+.sidebar .card-body {
+    position: relative; 
+    height: 100%; 
+    color: purple;
+}
+
+.sidebar .card-body ul li a {
+    color: #000;
+}
+
+.sidebar .card-body ul {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-70%); 
+    margin-left: 5px;
+    list-style: none;
+}
+
+.sidebar .card-body ul li:hover {
+    /* background: #ED115F; */
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.sidebar .card-body ul li:hover a {
+    color: #ED115F;
+}
+
+.sidebar .card-body ul li a:visited {
+    color: #7D3C98; /* Visited link color */
+}
+
+.sidebar .card-body ul li {
+    line-height: 1; 
+}
+
+.fa{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+.list-unstyled li {
+    padding: 10px 0;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flag {
+        flex-direction: column;
+    }
+
+    .flag .official img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .alex img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 0 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .sidebar .card-body ul {
+        position: relative; 
+        top: auto; 
+        transform: none; 
+        text-align: left; 
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .flag .official img.img-fluid {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
