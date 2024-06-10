@@ -1,4 +1,4 @@
-body, h3, ul, p {
+body, h1, ul, p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
     padding: 10px 0;
 }
 
-.header h3 span {
+.header h1 span {
     color: #fff;
 }
 
@@ -193,7 +193,7 @@ body {
 }
 
 .header {
-    font-size: 22px;
+    font-size: 16px;
     padding:15px;
 }
 
