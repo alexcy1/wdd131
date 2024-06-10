@@ -174,8 +174,10 @@ body {
 
 .flag .official img {
     width: 250px;
-    height: 210px;
+    height: 190px;
     margin-right: 20px;
+    margin-bottom: -20px;
+    margin-top: 20px;
 }
 
 .flag p {
@@ -197,10 +199,14 @@ body {
     padding:15px;
 }
 
-.nigeria {
+.nigeria  {
     color: green;
     font-family: "Sofia", sans-serif;
     font-size: 24px;
+}
+
+.flag p{
+    font-size: 17px;
 }
 
 .sidebar .card {
@@ -321,5 +327,8 @@ body {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+    }
+    .flag .official img{
+        margin-bottom: -15px;
     }
 }
