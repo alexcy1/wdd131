@@ -323,6 +323,35 @@ body {
     }
 }
 
+@media (max-width: 720px) and (max-width: 1024px) {
+    .flag .official img.img-fluid {
+        max-width: 100%; 
+        width: 500px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 720px) and (max-width: 1024px) {
+    .alex img.img-fluid {
+        max-width: 100%; 
+        width: 500px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 720px) and (max-width: 1024px) {
+    .nigeria {
+        font-size: 32px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) and (max-width: 1024px) {
+    .card .about, .resources,
+    .card-body .title {
+        font-size: 26px;
+    }
+}
 
 @media (max-width: 768px) {
     .container {
