@@ -55,9 +55,9 @@
         gap: 1rem;
     }
 
-    .gallery img{
-        height:230px;
-    }
+    /* .gallery img{
+        height:auto;
+    } */
 }
 
 
