@@ -1,0 +1,64 @@
+
+@media only screen and (min-width: 700px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.05rem 1rem; 
+    }
+
+    .title {
+        flex-grow: 1;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+
+    .nav-links {
+        display: flex; 
+        justify-content: flex-end; 
+        flex-direction: row;
+        flex-grow: 1;
+        position: static; 
+        background-color: transparent; 
+        width: auto; 
+    }
+
+    .nav-links li {
+        margin: 0 1rem; 
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem; 
+    }
+
+    .nav-links a:hover {
+        background-color: #663399;
+        color: white; 
+        transition: 0.5s
+    }
+
+
+    main {
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center; 
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery img{
+        height:230px;
+    }
+}
+
+
+
