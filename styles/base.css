@@ -1,120 +1,62 @@
-body, h1, ul, p {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: #e3e3e3;
     font-family: "Trirong", serif;
+    background-color: #e3e3e3;
+    color: #555555;
 }
 
 .header {
     background-color: #ED115f;
     color: #000;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .header h1 span {
     color: #fff;
 }
 
-.nav, .navigation {
-    background-color: #000;
-}
-
-.nav, .navigation {
-    background-color: #000;
-}
-
 .nav {
-    grid-area: nav;
+    background-color: #000;
     padding: 0;
-    position: relative;
-}
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: #eee;
-    padding: 10px;
-    cursor: pointer;
 }
 
 .navigation {
     list-style: none;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    margin-top: 13px;
+    margin-bottom: -20px;
+    background-color: #000;
 }
 
 .navigation li {
     flex: 1 1 auto;
 }
-
 .navigation a {
-    display: block;
     color: #C0C0C0;
-    padding: .75rem;
     text-decoration: none;
-    text-align: center;
-    font-size: 19px;
-    position: relative; 
+    font-size: 21px;
+    position: relative;
+    transition: color 0.3s;
+    display: block;
+    padding: 0.7rem;
 }
 
 .navigation a:hover {
-    color: #C0C0C0;
+    color: #fff;
     text-decoration: overline;
-    /* background: #ed115f; */
     transition: .5s;
-    border-radius: 2px;
 }
 
 .navigation a.active {
-    color: #f24591; 
-}
-
-@media (max-width: 768px) {
-    .navigation {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-    }
-
-    .navigation.show {
-        display: flex;
-    }
-
-    .navigation a {
-        text-align: center;
-    }
-}
-
-
-@media (max-width:768px) {
-    .navigation {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-    }
-
-    .navigation.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
+    color: #f24591;
 }
 
 .container {
@@ -126,7 +68,6 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
-
 
 .card {
     background: white;
@@ -143,7 +84,9 @@ body {
     border-top-right-radius: 8px;
     text-align: center;
     font-family: Tahoma, Verdana, sans-serif;
+    font-size: 22px;
 }
+
 
 .card-body {
     padding: 20px;
@@ -159,7 +102,6 @@ body {
     text-align: justify;
     font-size: 19px;
     font-family: Tahoma, Verdana, sans-serif;
-    color: 	#555555;
 }
 
 .alex img {
@@ -176,32 +118,17 @@ body {
     width: 250px;
     height: 190px;
     margin-right: 20px;
-    margin-bottom: -20px;
-    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-top: 25px;
 }
 
 .flag p {
     flex: 1;
     font-family: Verdana, sans-serif;
     color: 	#555555;
-    font-size: 19px;
-    margin-top: -10px;
+    font-size: 18px;
+    margin-top: -25px;
     text-align: justify
-}
-
-.card-body .title {
-    text-align: center;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.card-header {
-    font-size: 19px;
-}
-
-.header {
-    font-size: 16px;
-    padding:15px;
 }
 
 .nigeria  {
@@ -212,57 +139,54 @@ body {
     font-size: 24px;
 }
 
+.card-body .title {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 .sidebar .card {
     height: 100%;
 }
 
 .sidebar .card-body {
-    position: relative; 
-    height: 100%; 
-    color: purple;
-}
-
-.sidebar .card-body ul li a {
-    color: #000;
+    position: relative;
+    height: 100%;
 }
 
 .sidebar .card-body ul {
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-70%); 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
     margin-left: 5px;
     list-style: none;
 }
 
-.sidebar .card-body ul li:hover {
-    transition: 0.5s;
-    border-radius: 5px;
+.sidebar .card-body ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar .card-body ul li {
+    line-height: 2; 
+    font-size: 16.5px;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
 }
 
 .sidebar .card-body ul li:hover a {
     color: #ED115F;
+    transition: .5s;
 }
 
 .sidebar .card-body ul li a:visited {
     color: #7D3C98; 
 }
 
-.sidebar .card-body ul li {
-    line-height: 1; 
-}
-
 .fa{
     margin-left:5px;
     margin-right:5px;
-}
-
-
-.list-unstyled li {
-    padding: 10px 0;
-}
-
-.text-decoration-none {
-    text-decoration: none;
 }
 
 .footer {
@@ -271,6 +195,8 @@ body {
     text-align: center;
     padding: 10px 0;
 }
+
+
 
 @media (max-width: 767px) {
     .navbar-collapse {
@@ -321,6 +247,28 @@ body {
 @media (max-width: 767px) {
     .flag .official img.img-fluid {
         max-width: 100%; 
+        width: 800px;
+        margin-bottom: 10px;
+    }
+
+    .nigeria {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .alex img {
+        max-width: 100%; 
+        width: 800px;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .flag .official img.img-fluid {
+        max-width: 100%; 
         height: auto; 
     }
 }
@@ -345,13 +293,20 @@ body {
     .nigeria {
         font-size: 32px;
         text-align: center;
+        margin-bottom: 40px;
     }
 }
 
 @media (max-width: 720px) and (max-width: 1024px) {
     .card .about, .resources,
     .card-body .title {
-        font-size: 26px;
+        font-size: 22px;
+    }
+    .card {
+        margin-top: 20px;
+    }
+    .sidebar{
+        margin-bottom: 40px;
     }
 }
 
@@ -360,6 +315,70 @@ body {
         padding: 10px;
     }
     .flag .official img{
-        margin-bottom: -15px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.hamburger,
+.close-icon {
+    font-size: 20px;
+    background: black;
+    border: none;
+    cursor: pointer;
+    display: none; 
+    color: white; 
+    margin-bottom: -15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        width: 100%;
+        background-color: black;
+    }
+
+    .hamburger {
+        display: block;
+        width: 100%;
+        padding-left: 20px !important;
+        text-align: left;
+        padding: 5px 0;
+        color: white;
+    }
+
+    .close-icon {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        color: white;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        padding: 0;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation li {
+        margin: 5px 0;
+    }
+
+    .navigation a {
+        color: white;
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navigation li:nth-child(5) a {
+        padding-bottom: 35px;
     }
 }

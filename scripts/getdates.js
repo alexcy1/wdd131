@@ -24,14 +24,49 @@ const formattedDate = formatLastModifiedDate(lastModifiedDate);
 document.getElementById('lastModifiedDateTime').textContent = formattedDate;
 
 
-// Show And Hide Menu ------------------------------------------------------------------
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
+    var closeIcon = document.querySelector('.close-icon');
     var navigation = document.querySelector('.navigation');
+
+    var screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+        hamburger.style.display = 'block';
+    }
 
     hamburger.addEventListener('click', function() {
         navigation.classList.toggle('show');
+        hamburger.style.display = 'none';
+        closeIcon.style.display = 'block';
+    });
+
+    closeIcon.addEventListener('click', function() {
+        navigation.classList.remove('show');
+        closeIcon.style.display = 'none';
+        hamburger.style.display = 'block';
     });
 });
+
+window.addEventListener('resize', function() {
+    var screenWidth = window.innerWidth;
+    var hamburger = document.querySelector('.hamburger');
+    var closeIcon = document.querySelector('.close-icon');
+    var navigation = document.querySelector('.navigation');
+
+    if (screenWidth > 768) {
+        hamburger.style.display = 'none';
+        closeIcon.style.display = 'none';
+        navigation.classList.remove('show');
+    } else {
+        hamburger.style.display = 'block';
+        closeIcon.style.display = 'none';
+        navigation.classList.remove('show');
+    }
+});
+
+
+
+
+
 
 
