@@ -22,20 +22,6 @@ header {
     cursor: pointer;
 }
 
-/* .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; 
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #4b0082;
-    text-align: center;
-} */
-
 .nav-links {
     list-style: none;
     padding: 0;
@@ -140,7 +126,7 @@ footer {
     }
 
     h1.title {
-        font-size: 1.5rem; /* Adjust the font size for mobile */
+        font-size: 1.5rem;
     }
 }
 
