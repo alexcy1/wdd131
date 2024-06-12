@@ -108,7 +108,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
     .nav-links a {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   
     .nav-links li:last-child {
@@ -119,7 +119,7 @@ footer {
 
   @media (max-width: 800px) and (max-width: 1024px){
     .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
   }
 
@@ -128,3 +128,16 @@ footer {
         font-size: 1.3rem;
       }
   }
+
+  @media (max-width: 600px) {
+    header {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    h1.title {
+        font-size: 1.5rem; /* Adjust the font size for mobile */
+    }
+}
+
+

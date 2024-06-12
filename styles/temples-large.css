@@ -32,7 +32,7 @@
 
     .nav-links a {
         padding: 0.5rem 1rem;
-        font-size: 1.3rem; 
+        font-size: 1.2rem; 
     }
 
     .nav-links a:hover {
@@ -55,6 +55,5 @@
         gap: 1rem;
     }
 }
-
 
 
