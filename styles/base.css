@@ -20,12 +20,10 @@ body {
     color: #fff;
 }
 
-/* Navbar styles */
 .nav, .navigation {
     background-color: #000;
 }
 
-/* Navbar styles */
 .nav, .navigation {
     background-color: #000;
 }
@@ -159,7 +157,9 @@ body {
 .about-me .text {
     flex: 1;
     text-align: justify;
-    font-size: 18px;
+    font-size: 19px;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: 	#555555;
 }
 
 .alex img {
@@ -182,12 +182,17 @@ body {
 
 .flag p {
     flex: 1;
+    font-family: Verdana, sans-serif;
+    color: 	#555555;
+    font-size: 19px;
+    margin-top: -10px;
+    text-align: justify
 }
 
 .card-body .title {
     text-align: center;
     font-size: 22px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 .card-header {
@@ -201,12 +206,10 @@ body {
 
 .nigeria  {
     color: green;
-    font-family: "Sofia", sans-serif;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 24px;
-}
-
-.flag p{
-    font-size: 17px;
 }
 
 .sidebar .card {
@@ -232,7 +235,6 @@ body {
 }
 
 .sidebar .card-body ul li:hover {
-    /* background: #ED115F; */
     transition: 0.5s;
     border-radius: 5px;
 }
@@ -242,7 +244,7 @@ body {
 }
 
 .sidebar .card-body ul li a:visited {
-    color: #7D3C98; /* Visited link color */
+    color: #7D3C98; 
 }
 
 .sidebar .card-body ul li {
