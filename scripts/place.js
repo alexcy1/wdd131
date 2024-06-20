@@ -15,15 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
         return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
     }
 
-    const lastModifiedDate = document.lastModified;
-    const formattedDate = formatLastModifiedDate(lastModifiedDate);
-    document.getElementById('lastModifiedDateTime').textContent = formattedDate;
+    function updateLastModifiedDate() {
+        const lastModifiedDate = document.lastModified;
+        const formattedDate = formatLastModifiedDate(lastModifiedDate);
+        const lastModifiedElement = document.getElementById('lastModifiedDateTime');
+        if (lastModifiedElement) {
+            lastModifiedElement.textContent = formattedDate;
+        }
+    }
 
-    const currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
-
-    const temperature = 10; // Celsius
-    const windSpeed = 5; // km/h
+    function updateCurrentYear() {
+        const currentYear = new Date().getFullYear();
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+            yearElement.textContent = currentYear;
+        }
+    }
 
     function calculateWindChill(temp, wind) {
         return (
@@ -36,9 +43,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if (temp <= 10 && wind > 4.8) {
             windChill = calculateWindChill(temp, wind);
         }
-        document.getElementById('wind-chill').innerHTML = windChill !== 'N/A' ? `${windChill} &deg;C` : windChill;
+        const windChillElement = document.getElementById('wind-chill');
+        if (windChillElement) {
+            windChillElement.innerHTML = windChill !== 'N/A' ? `${windChill} &deg;C` : windChill;
+        }
     }
 
-    displayWindChill(temperature, windSpeed);
+    updateLastModifiedDate();
+    updateCurrentYear();
 
+    const temperature = 10; // Celsius
+    const windSpeed = 5; // km/h
+    displayWindChill(temperature, windSpeed);
+    
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            // Page was restored from the bfcache
+            updateLastModifiedDate();
+            updateCurrentYear();
+            displayWindChill(temperature, windSpeed);
+        }
+    });
 });
