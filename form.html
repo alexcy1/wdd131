@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product, Review, Post Review, Post Product">
+    <meta name="author" content="Alexander Cyril">
+    <title>Product Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Sofia&family=Trirong&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/utility.js" defer></script>
+</head>
+<body>
+
+    <header class="text-center py-2 header">
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            
+            <form id="product-review-form" method="get" action="review.html">
+
+                <label for="product-name">Product Name 
+                    <span class="required-indicator">*</span>
+                </label>
+
+                <select id="product-name" name="product-name" autocomplete="off" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            
+                <div>Overall Rating
+                    <span class="required-indicator">*</span>
+                </div>
+                <div class="rating">
+                    <div>
+                        <label for="star1">&star;</label>
+                        <input type="radio" id="star1" name="rating" value="1" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="star2">&star;&star;</label>
+                        <input type="radio" id="star2" name="rating" value="2" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="star3">&star;&star;&star;</label>
+                        <input type="radio" id="star3" name="rating" value="3" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="star4">&star;&star;&star;&star;</label>
+                        <input type="radio" id="star4" name="rating" value="4" autocomplete="off" required>       
+                    </div>
+                    <div>
+                        <label for="star5">&star;&star;&star;&star;&star;</label>
+                        <input type="radio" id="star5" name="rating" value="5" autocomplete="off" required>
+                    </div>
+                </div>
+                
+                <label for="installation-date">Date of Installation
+                    <span class="required-indicator">*</span>
+                </label>
+                <input type="date" id="installation-date" name="installation-date" autocomplete="off" required>
+            
+                <div class="features-label">Which features did you find useful in the product?</div>
+                <div class="features">
+                    <div>
+                        <input type="checkbox" id="durability" name="feature-durability" value="durability" autocomplete="off">
+                        <label for="durability">Durability</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ease-of-use" name="feature-ease-of-use" value="ease-of-use" autocomplete="off">
+                        <label for="ease-of-use">Ease of Use</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="performance" name="feature-performance" value="performance" autocomplete="off">
+                        <label for="performance">Performance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="design" name="feature-design" value="design" autocomplete="off">
+                        <label for="design">Design</label>
+                    </div>
+                </div>
+            
+                <label for="review" class="optional-label">Written Review</label>
+                <textarea id="review" name="review" autocomplete="off"></textarea>
+            
+                <label for="username" class="optional-label">Your Name</label>
+                <input type="text" id="username" name="username" autocomplete="off">
+            
+                <input id="submit" type="submit" value="Post Review">
+            </form>
+            
+        </div>
+    </main>
+
+    <footer class="text-center py-3 footer">
+        <div class="container">
+            &copy;<span id="year"></span> 🌺 Alexander Cyril 🌺 Lagos, Nigeria <br>
+            <small>Last Modification: <span id="lastModifiedDateTime"></span></small>
+        </div>
+    </footer>
+
+</body>
+</html>
