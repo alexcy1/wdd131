@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to become a member at Erruki Gulf Club and enjoy exclusive access to premier facilities.">
+    <meta name="author" content="Alexander Cyril">
+    <title>Join Gulf Club</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io//favicon-16x16.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&family=Sofia&family=Trirong">
+    <link rel="stylesheet" href="styles/gulfclub.css">
+    <link rel="stylesheet" href="styles/gulfclub-large.css" media="screen and (min-width: 600px)">
+    <script src="scripts/register.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
+</head>
+
+<body>
+    <header>
+      <a href="gulfclub.html"></a>
+    
+        <nav>
+            <button class="hamburger">☰</button>
+            <ul class="nav-links">
+                <li><a href="gulfclub.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gulfclub.html#members">Members</a></li>
+                <li><a href="gulfclub.html#admin">Admin</a></li>
+                <li><a class="active" href="register.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container register">  
+            <form id="registrationForm">
+              <h3 class="editHeading">New Membership Entry Form</h3>
+              <h4 class="joinInfo">Please use this form to enter your personal information for membership signup!</h4>
+
+              <fieldset>
+                <label for="name">Name*</label> 
+                <input id="name" placeholder="Your name" type="text" autocomplete="name" required autofocus>
+              </fieldset>
+
+              <fieldset>
+                <label for="email">Email*</label>
+                <input id="email" placeholder="Your Email Address" type="email" autocomplete="email" required>
+              </fieldset>
+
+              <fieldset>
+                <label for="phone">Phone*</label>
+                <input id="phone" placeholder="Your Phone Number" type="tel" autocomplete="phone" required>
+              </fieldset>
+
+              <fieldset>
+                <label for="membershipType">Membership Type*</label>
+                <select id="membershipType" name="membershipType" required>
+                    <option value="member">Member</option>
+                    <option value="admin">Admin</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <label for="description">About Me*</label>
+                <textarea id="description" name="description" maxlength="300" rows="4" placeholder="About me in 300 words" required></textarea>
+                <small id="descriptionCount">0 / 300</small>
+              </fieldset>
+
+              <fieldset>
+                <label for="image">Upload Profile Image</label>
+                <input class="ImageBtn" type="file" class="centerImage" id="image" name="image" accept="image/*" required>
+              </fieldset>
+
+              <fieldset>
+                <button class="btn" type="submit" data-submit="...Sending">Join Club</button>
+              </fieldset>
+            </form>
+          </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🌺 Alexander Cyril 🌺 Lagos, Nigeria</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
