@@ -910,3 +910,24 @@ form label {
   }
   
   
+
+
+
+  .aboutbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4b0082; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.aboutbutton:hover {
+    background-color: #3a006a; 
+    border-radius: 0px;
+}
