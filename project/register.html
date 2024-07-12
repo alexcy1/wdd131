@@ -55,15 +55,16 @@
 
               <fieldset>
                 <label for="phone">Phone*</label>
-                <input id="phone" placeholder="Your Phone Number" type="tel" autocomplete="phone" required>
+                <input id="phone" placeholder="Your Phone Number" type="tel" autocomplete="tel" required>
               </fieldset>
 
               <fieldset>
                 <label for="membershipType">Membership Type*</label>
                 <select id="membershipType" name="membershipType" required>
-                    <option value="member">Member</option>
-                    <option value="admin">Admin</option>
-                </select>
+                  <option value="" disabled selected>Select your membership type</option>
+                  <option value="member">Member</option>
+                  <option value="admin">Admin</option>
+              </select>
               </fieldset>
 
               <fieldset>
@@ -74,7 +75,7 @@
 
               <fieldset>
                 <label for="image">Upload Profile Image</label>
-                <input class="ImageBtn" type="file" class="centerImage" id="image" name="image" accept="image/*" required>
+                <input class="ImageBtn" type="file" id="image" name="image" accept="image/*" required>
               </fieldset>
 
               <fieldset>

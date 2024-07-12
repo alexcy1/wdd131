@@ -416,6 +416,7 @@ footer {
 .button-container button:hover {
     background-color: #8302df;
     border-radius: 0px;
+    transition: 0.5s;
 }
 
 .sub-head {
@@ -923,11 +924,12 @@ form label {
     background-color: #4b0082; 
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 7px;
     transition: background-color 0.3s ease;
 }
 
 .aboutbutton:hover {
-    background-color: #3a006a; 
+    background-color: #8302df; 
     border-radius: 0px;
+    transition: 0.5s;
 }
