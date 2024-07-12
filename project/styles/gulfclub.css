@@ -28,6 +28,7 @@ header h1 {
 
 .subHead {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin-bottom: 5px;
 }
 
 .hamburger {
@@ -234,8 +235,8 @@ footer {
     .form-search input {
         margin-bottom: 10px;
     }
-    
 }
+
 
 
 
@@ -758,3 +759,155 @@ form label {
     }
 }
 
+
+
+
+
+/* FAQ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 48rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #595959;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+    color: #4b0082;
+}
+
+.accordion button .accordion-title {
+    padding-right: 1.5em;
+}
+
+.accordion button .icon {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+
+.accordion button .icon::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+}
+
+.accordion button .icon::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+}
+
+.accordion button[aria-expanded=true] {
+    color: #4b0082;
+}
+
+.accordion button[aria-expanded=true] .icon::after {
+    width: 0;
+}
+
+.accordion button[aria-expanded=true] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+}
+
+.accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+}
+
+.accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .accordion button {
+        font-size: 1rem;
+    }
+
+    .accordion .accordion-content p {
+        font-size: 0.875rem;
+    }
+}
+
+
+ 
+
+
+.midcard {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+  }
+  
+  .midcard-body {
+    padding: 20px;
+  }
+  
+  .midcard-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  

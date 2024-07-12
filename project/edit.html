@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Erruki Gulf Club for inquiries, reservations, or assistance. Our team is here to help!">
+    <meta name="description" content="Update your profile at Erruki Gulf Club to keep information current and manage preferences.">
     <meta name="author" content="Alexander Cyril">
-    <title>Contact Us</title>
+    <title>Edit Member</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io//favicon-32x32.png">
@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&family=Sofia&family=Trirong">
     <link rel="stylesheet" href="styles/gulfclub.css">
     <link rel="stylesheet" href="styles/gulfclub-large.css" media="screen and (min-width: 600px)">
-    <script src="scripts/contact.js" defer></script>
     <script src="scripts/utils.js" defer></script>
+    <script src="scripts/edit.js" defer></script>
 </head>
+
 <body>
     <header>
         <a href="gulfclub.html"></a>
@@ -30,22 +31,26 @@
                 <li><a href="gulfclub.html#members">Members</a></li>
                 <li><a href="gulfclub.html#admin">Admin</a></li>
                 <li><a href="register.html">Join</a></li>
-                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="container contact">
-            <form id="contactForm" method="POST">
-
-                <h3 class="editHeading">Get in touch with us</h3>
-                <h4 class="joinInfo">Contact us for more information</h4>
-                <h4 class="address"><i class="fa fa-map-marker"></i> 103 Maryland, Lagos Nigeria |
-                    <i class="fa fa-envelope"></i> erruki.gulf@gmail.com | 
-                    <i class="fa fa-phone"></i> +234(0)-902-216-2214 | +234(0)-809-026-1214</h4>
+        <div class="container editForm">  
+            <form id="editForm">
+                <h3 class="editHeading">Membership Update</h3>
                 
-                    <fieldset>
+                <img id="imagePreview" alt="Image Preview">
+                <h3 id="memberNameDisplay"></h3>
+                
+                <fieldset>
+                    <label class="imageLabel" for="editImage">Upload Profile Image</label> 
+                    <input type="file" class="centerImage" id="editImage" name="editImage" accept="image/*">
+                </fieldset>
+
+                <fieldset>
                     <label for="name">Name*</label>
                     <input id="name" placeholder="Your name" type="text" autocomplete="name" required autofocus>
                 </fieldset>
@@ -57,23 +62,27 @@
 
                 <fieldset>
                     <label for="phone">Phone*</label>
-                    <input id="phone" placeholder="Your Phone Number" type="text" autocomplete="phone" required>
+                    <input id="phone" placeholder="Your Phone Number" type="tel" autocomplete="phone" required>
                 </fieldset>
 
                 <fieldset>
-                    <label for="subject">Subject*</label>
-                    <input id="subject" placeholder="Subject" type="text" autocomplete="on" required>
+                    <label for="type">Membership Type*</label>
+                    <select id="type" class="memberType" name="membershipType" required>
+                        <option value="member">Member</option>
+                        <option value="admin">Admin</option>
+                    </select>
                 </fieldset>
 
                 <fieldset>
-                    <label for="message">Message*</label>
-                    <textarea id="message" placeholder="Type your message here...." required></textarea>
+                    <label for="description">About Me*</label>
+                    <textarea id="description" name="description" maxlength="300" rows="4" placeholder="About me in 300 words" autocomplete="on" required></textarea>
+                    <small id="descriptionCount">0 / 300</small>
                 </fieldset>
 
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send Message</button>
+                    <button type="submit" data-submit="...Saving">Update Profile</button>
+                    <button type="button" class="btn" id="cancelButton">Cancel</button>
                 </fieldset>
-
             </form>
         </div>
     </main>
@@ -82,6 +91,5 @@
         <p>&copy; <span id="year"></span> 🌺 Alexander Cyril 🌺 Lagos, Nigeria</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-    
 </body>
 </html>
